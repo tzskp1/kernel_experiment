@@ -1,0 +1,3 @@
+./configure --target-list=x86_64-softmmu --enable-kvm --enable-vnc --disable-vnc-sasl
+find . | cpio --quiet -H newc -o | gzip > ../initrd.img
+
