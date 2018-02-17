@@ -1,3 +1,5 @@
 ./configure --target-list=x86_64-softmmu --enable-kvm --enable-vnc --disable-vnc-sasl
 find . | cpio --quiet -H newc -o | gzip > ../initrd.img
+qemu -s -S -m 256 -nographic -kernel ./linux-4.15.3/arch/x86_64/boot/bzImage -initrd ./initrd.img -append console=ttyS0,115200
+
 
